@@ -208,3 +208,8 @@ body {
     border-radius: 0 0 5px 0;
     cursor: pointer;
 }
+
+a {
+    text-decoration: none;
+    color: #00486c;
+}

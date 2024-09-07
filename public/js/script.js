@@ -20,13 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Despacho Internacional",
             icon: "despachoInternacionalIcon.svg",
             alt: "despachoInternacionalIcon",
+            href: "https://prepostagem.correios.com.br/"
         },
         {
             title: "Despacho Nacional",
             icon: "despachoNacionalIcon.svg",
             alt: "despachoNacionalIcon",
+            href: "https://prepostagem.correios.com.br/"
         },
-        { title: "E-Carta", icon: "eCartaIcon.svg", alt: "eCartaIcon" },
+        { 
+            title: "E-Carta", 
+            icon: "eCartaIcon.svg", 
+            alt: "eCartaIcon",
+            href: "https://prepostagem.correios.com.br/" 
+        },
     ];
 
     const allServices = [
@@ -34,31 +41,37 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Coleta Agendada",
             icon: "coletaAgendadaIcon.svg",
             alt: "coletaAgendadaIcon",
+            href: "https://prepostagem.correios.com.br/"
         },
         {
             title: "Pré-postagem internacional",
             icon: "despachoInternacionalIcon.svg",
             alt: "Pré-postagemInternacionalIcon",
+            href: "https://prepostagem.correios.com.br/"
         },
         {
             title: "Acompanhe seu objeto",
             icon: "searchBox.svg",
             alt: "AcompanheSeuPedido",
+            href: "https://prepostagem.correios.com.br/"
         },
         {
             title: "Documento Internacional",
             icon: "worldIcon.svg",
             alt: "DocumentoInternaciona",
+            href: "https://prepostagem.correios.com.br/"
         },
         {
             title: "Fatura Eletrônica",
             icon: "paperBill.svg",
             alt: "FaturaEletrônica",
+            href: "https://prepostagem.correios.com.br/"
         },
         {
             title: "Preços e Prazos",
             icon: "timeMoneyIcon.svg",
             alt: "Preços e Prazos",
+            href: "https://prepostagem.correios.com.br/"
         },
     ];
 
@@ -76,6 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
         serviceSection.innerHTML = "";
 
         services.forEach((service) => {
+            var containerHref = document.createElement("a");
+            containerHref.setAttribute('href', service.href);
+
             var serviceContainer = document.createElement("div");
             serviceContainer.className = "service";
 
@@ -100,9 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Adiciona os elementos ao container do serviço
             serviceContainer.appendChild(yellowStripe);
             serviceContainer.appendChild(serviceContent);
+            containerHref.appendChild(serviceContainer);
 
             // Adiciona o container do serviço à seção de serviços
-            serviceSection.appendChild(serviceContainer);
+            serviceSection.appendChild(containerHref);
         });
     }
 
@@ -116,6 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
         allServiceSection.innerHTML = "";
 
         services.forEach((service) => {
+            var containerHref = document.createElement("a");
+            containerHref.setAttribute('href', service.href);
+
             var serviceContainer = document.createElement("div");
             serviceContainer.className = "service";
 
@@ -142,7 +162,8 @@ document.addEventListener("DOMContentLoaded", () => {
             serviceContainer.appendChild(serviceContent);
 
             // Adiciona o container do serviço à seção de serviços
-            allServiceSection.appendChild(serviceContainer);
+            containerHref.appendChild(serviceContainer);
+            allServiceSection.appendChild(containerHref);
         });
     }
 

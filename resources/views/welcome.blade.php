@@ -3,16 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="imagex/png" href="./images/logoCorreios.png">
 
-        <title>Laravel</title>
+        <title>Luna - Correios</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-
         <!-- Analytic -->
-
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5E769J6R0"></script>
         <script>
@@ -22,7 +20,6 @@
 
             gtag('config', 'G-T5E769J6R0');
         </script>
-
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
     </head>
@@ -78,7 +75,7 @@
                 <img src="{{ asset('images/lunaNuvemTexto.svg') }}" alt="Luna">
             </button>
         <div id="chatbox">
-            <div id="chatbox-header">Chatbot</div>
+            <div id="chatbox-header">Luna</div>
             <div id="chatbox-messages"></div>
             <div id="chatbox-input">
                 <textarea id="message-input" placeholder="Digite uma mensagem..."></textarea>
